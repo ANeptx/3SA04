@@ -4,9 +4,9 @@ import { View, Text, FlatList, TouchableHighlight, StyleSheet, ImageBackground }
 import { useNavigation } from '@react-navigation/native';
 
 const availableZipItems = [
-    { place: 'Hatyai', code: '90110' },
-    { place: 'Trang', code: '92000' },
-    { place: 'Chiangmai', code: '50000' },
+    { place: 'Hatyai',  code: '90110' },
+    { place: 'Trang',    code: '92000' },
+    { place: 'Chiangmai',code: '50000' },
     { place: 'Khonkaen', code: '40000' },
     { place: 'Chonburi', code: '20000' },
 ]
@@ -15,7 +15,7 @@ const ZipItem = ({ place, code, navigation }) => (
     <TouchableHighlight onPress={() => navigation.navigate('Weather', { zipCode: code })}>
 
         <View>
-            <Text style={styles.medium}>{place}            {code}</Text>
+            <Text style={styles.medium}>{place}                    {code}</Text>
         </View>
     </TouchableHighlight>
 )
@@ -26,7 +26,7 @@ export default function ZipCodeScreen() {
     const navigation = useNavigation()
     return (
         <View>
-             <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
+             <ImageBackground source={require('../1.gif')} style={styles.backdrop}>
             <FlatList
                 data={availableZipItems}
                 keyExtractor={_keyExtractor}
